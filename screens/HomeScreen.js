@@ -1,27 +1,27 @@
 import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 
-export default function HomeScreen() {
+export default function NewsScreen() {
   return (
     <View style={styles.container}>
-      
-      <Text style={styles.header}>Notícias de Hoje</Text>
+      <Text style={styles.header}>Notícias do Tricolor</Text>
       <FlatList
         data={newsData}
         renderItem={({ item }) => <NewsItem item={item} />}
         keyExtractor={item => item.id}
+        contentContainerStyle={styles.listContent}
       />
     </View>
   );
 }
 
-// Simulação de dados de notícias
+// Dados fake simulando notícias do São Paulo FC
 const newsData = [
-  { id: '1', title: 'Últimas Notícias sobre Tecnologia', description: 'Novidades e avanços no mundo da tecnologia.' },
-  { id: '2', title: 'Mercado Financeiro em Alta', description: 'Análise do desempenho do mercado financeiro.' },
-  { id: '3', title: 'Dicas de Viagem para o Verão', description: 'Melhores destinos e dicas para suas férias.' },
-  { id: '4', title: 'Nova Atualização de Software Disponível', description: 'Detalhes sobre a mais recente versão do software.' },
-  { id: '5', title: 'Receitas Deliciosas para o Fim de Semana', description: 'Ideias de pratos saborosos para você preparar.' },
+  { id: '1', title: 'São Paulo vence clássico no Morumbi', description: 'Com gol de Calleri, Tricolor bate rival por 1x0.' },
+  { id: '2', title: 'Novo uniforme é lançado', description: 'São Paulo apresenta novo manto com design retrô.' },
+  { id: '3', title: 'Treinamento forte no CT da Barra Funda', description: 'Equipe se prepara para confronto decisivo no Brasileirão.' },
+  { id: '4', title: 'Reforço confirmado!', description: 'Tricolor fecha com meia argentino para temporada.' },
+  { id: '5', title: 'Ingressos esgotados!', description: 'Torcida tricolor lotará o Morumbi no próximo jogo.' },
 ];
 
 const NewsItem = ({ item }) => (
@@ -31,36 +31,39 @@ const NewsItem = ({ item }) => (
   </View>
 );
 
-
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#ffe4e1',
-    paddingTop: 40, 
+    backgroundColor: '#000', // Fundo preto
+    paddingTop: 50,
     paddingHorizontal: 20,
   },
   header: {
-    fontSize: 24,
+    fontSize: 26,
     fontWeight: 'bold',
+    color: '#fff', // Título branco
+    textAlign: 'center',
     marginBottom: 20,
   },
+  listContent: {
+    paddingBottom: 20,
+  },
   newsItem: {
-    backgroundColor: 'white',
+    backgroundColor: '#fff', // Cartão branco
+    borderLeftWidth: 5,
+    borderLeftColor: '#C8102E', // Faixa vermelha lateral
     padding: 15,
-    marginBottom: 10,
+    marginBottom: 15,
     borderRadius: 8,
-    borderWidth: 1,
-    borderColor: '#ddd',
   },
   title: {
     fontSize: 18,
     fontWeight: 'bold',
+    color: '#000', // Título preto
     marginBottom: 5,
   },
   description: {
     fontSize: 16,
-    color: '#555',
+    color: '#333', // Texto cinza escuro
   },
 });
-

@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   loginButtonText: {
-    color: '#3C2415',
+    color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
   },
