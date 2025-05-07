@@ -18,7 +18,7 @@ export default function NewsScreen() {
 // Dados fake simulando notícias do São Paulo FC
 const newsData = [
   { id: '1', title: 'São Paulo vence clássico no Morumbi', description: 'Com gol de Calleri, Tricolor bate rival por 1x0.' },
-  { id: '2', title: 'São Paulo vence segue invicto a 12 jogos na Libertadores !', description: 'Contra a Alianz Alima São Paulo vence de 2x0 .' },
+  { id: '2', title: 'São Paulo segue invicto a 12 jogos na Libertadores!', description: 'Contra a Alianza Lima, São Paulo vence de 2x0.' },
   { id: '3', title: 'Novo uniforme é lançado', description: 'São Paulo apresenta novo manto com design retrô.' },
   { id: '4', title: 'Treinamento forte no CT da Barra Funda', description: 'Equipe se prepara para confronto decisivo no Brasileirão.' },
   { id: '5', title: 'Reforço confirmado!', description: 'Tricolor fecha com meia argentino para temporada.' },

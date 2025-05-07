@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { ImageBackground } from 'react-native';
 
 export default function LoginScreen() {
   const [username, setUsername] = useState('');
@@ -75,15 +74,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
     backgroundColor: 'white',
-    alignItems: 'center',  // Garante que tudo fique centralizado
+    alignItems: 'center',
   },
   logoContainer: {
     alignItems: 'center',
-    marginBottom: 30, // Ajusta o espaço entre a logo e os campos
+    marginBottom: 30,
   },
   logo: {
-    width: 900,  // Ajuste o tamanho conforme necessário
-    height: 200, // Ajuste o tamanho conforme necessário
+    width: 300, // Tamanho ajustado pra não ficar exagerado
+    height: 150,
     resizeMode: 'contain',
   },
   title: {
